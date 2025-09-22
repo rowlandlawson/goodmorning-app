@@ -18,7 +18,8 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/messages", form);
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const res = await axios.post(`${API_URL}/api/messages`, form);
       if (res.data.success) {
         toast.success("🎉 Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
