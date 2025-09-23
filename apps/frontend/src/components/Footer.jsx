@@ -8,7 +8,7 @@ export default function Footer() {
               Built with Next.js, and Express
             </p>
              <p className="text-gray-500 text-sm">
-              All messages are stored securely in PostgreSQL
+              All messages are stored securely 
             </p>
           </div>
     </footer>

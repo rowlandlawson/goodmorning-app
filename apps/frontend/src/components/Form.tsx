@@ -21,7 +21,7 @@ export default function Home() {
       const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
       const res = await axios.post(`${API_URL}/api/messages`, form);
       if (res.data.success) {
-        toast.success("🎉 Message sent successfully!");
+        toast.success(" Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
       } else {
         toast.error(res.data.message || "❌ Failed to send message");
@@ -125,7 +125,7 @@ export default function Home() {
                     Sending...
                   </div>
                 ) : (
-                  "Send Message ✨"
+                  "Send Message"
                 )}
               </button>
             </form>
